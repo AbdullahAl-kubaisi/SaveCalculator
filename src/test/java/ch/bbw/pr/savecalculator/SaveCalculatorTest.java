@@ -48,6 +48,18 @@ public class SaveCalculatorTest {
 
     }
 
+    @Test(expected = ArithmeticException.class)
+    public void testExceptedException()
+    {
+        testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void testUnExceptedException() throws ArithmeticException
+    {
+        testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE);
+    }
+
     @Test // test will failed here, because the first assertion is wrong
     public void testMultipleAssert()
     {
