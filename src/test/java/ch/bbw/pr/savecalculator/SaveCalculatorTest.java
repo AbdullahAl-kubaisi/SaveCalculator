@@ -1,11 +1,19 @@
 package ch.bbw.pr.savecalculator;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class SaveCalculatorTest {
-    private final SaveCalculator testee = new SaveCalculator();
+    private SaveCalculator testee;
+
+    @Before
+    public void setUp()
+    {
+        testee = new SaveCalculator();
+    }
     @Test
     public void testSummeZweiPositiveIsOk() {
         assertEquals(30, testee.summe(10, 20));
@@ -62,5 +70,11 @@ public class SaveCalculatorTest {
         assertEquals(-97, testee.subtraktion(-20, 77));
         assertEquals(-2899, testee.subtraktion(-1000, 1899));
         assertEquals(-70, testee.subtraktion(-50, 20));
+    }
+
+    @After
+    public void testAfter()
+    {
+        testee = null;
     }
 }
