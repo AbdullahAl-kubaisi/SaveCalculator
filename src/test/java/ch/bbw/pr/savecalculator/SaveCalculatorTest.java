@@ -9,51 +9,61 @@ import static org.junit.Assert.*;
 public class SaveCalculatorTest {
     private SaveCalculator testee;
 
+    // create saveCalculator object before all test begin to insure that testee not null
     @Before
     public void setUp()
     {
         testee = new SaveCalculator();
     }
+    // test methode summe with two positive numbers
     @Test
     public void testSummeZweiPositiveIsOk() {
         assertEquals(30, testee.summe(10, 20));
 
     }
 
+    // test methode summe with two negative numbers
     @Test
     public void testSummeZweiNegativeIsOk() {
         assertEquals(-30, testee.summe(-10, -20));
 
     }
+
+    // test methode summe with one positive and one negative
     @Test
     public void testSummeEinNegativeEinPositiveIsOk() {
         assertEquals(-30, testee.summe(10, -40));
 
     }
 
+    // test methode subtraktion with two positive numbers
     @Test
     public void testSubZweiPositiveIsOk() {
         assertEquals(-10, testee.subtraktion(10, 20));
 
     }
 
+    // test methode subtraktion with two negative numbers
     @Test
     public void testSubZweiNegativeIsOk() {
         assertEquals(10, testee.subtraktion(-10, -20));
 
     }
+    // test methode subtraktion with one negative and one positive numbers
     @Test
     public void testSubEinNegativeEinPositiveIsOk() {
         assertEquals(50, testee.subtraktion(10, -40));
 
     }
 
+    // test expacted overflow of two integer values
     @Test(expected = ArithmeticException.class)
     public void testExceptedException()
     {
         testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE);
     }
 
+    // test unexpacted overflow of two integer values
     @Test
     public void testUnExceptedException() throws ArithmeticException
     {
