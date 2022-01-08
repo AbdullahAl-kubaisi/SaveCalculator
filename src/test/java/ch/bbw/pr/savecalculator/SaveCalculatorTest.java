@@ -4,6 +4,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import static org.junit.Assert.*;
 
 public class SaveCalculatorTest {
@@ -56,14 +59,14 @@ public class SaveCalculatorTest {
 
     }
 
-    // test expacted overflow of two integer values
+    // test expected overflow of two integer values
     @Test(expected = ArithmeticException.class)
     public void testExceptedException()
     {
         testee.summe(Integer.MAX_VALUE, Integer.MAX_VALUE);
     }
 
-    // test unexpacted overflow of two integer values
+    // test unexpected overflow of two integer values
     @Test
     public void testUnExceptedException() throws ArithmeticException
     {
@@ -76,6 +79,24 @@ public class SaveCalculatorTest {
         assertEquals(12, testee.summe(5,5));
         assertEquals(10, testee.summe(10,5));
         assertEquals(4, testee.summe(2,2));
+    }
+
+
+    // calculating power of number by calling a protected method (because of maven structure we can call protected method here)
+    // same package as SaveCalculator
+    @Test
+    public void testProtectedPower()
+    {
+        assertEquals(32, testee.pow(2, 5));
+    }
+
+    // use reflection to call private method
+    // test multiplication of two numbers
+    @Test(expected = NoSuchMethodException.class)
+    public void testPrivateMul() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Method method = testee.getClass().getDeclaredMethod("multiplication", int.class, int.class);
+        method.setAccessible(true);
+        assertEquals(10, method.invoke(testee, 2, 5));
     }
 
     @After

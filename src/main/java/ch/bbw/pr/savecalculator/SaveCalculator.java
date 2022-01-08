@@ -45,6 +45,10 @@ public class SaveCalculator {
 	}
 
 	// pow
+	protected int pow(int value, int powValue)
+	{
+		return (int) Math.pow(value, powValue);
+	}
 	// sqrt
 	// ...
 }
