@@ -1,4 +1,4 @@
-package ch.bbw.pr.savecalculator;
+package ch.bbw.aa.savecalculator;
 
 import static org.junit.Assert.assertTrue;
 
