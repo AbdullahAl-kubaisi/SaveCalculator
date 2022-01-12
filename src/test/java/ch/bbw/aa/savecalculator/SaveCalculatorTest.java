@@ -227,6 +227,45 @@ public class SaveCalculatorTest {
         testee.division(10, 0);
     }
 
+    // test methode sqrt of positive integer
+    @Test
+    public void testSqrtOfPositiveNumber()
+    {
+        assertEquals(5, testee.sqrt(25));
+    }
+
+    // test methode sqrt of negative integer
+    @Test(expected = ArithmeticException.class)
+    public void testSqrtOfNegativeNumber()
+    {
+        testee.sqrt(-36);
+    }
+
+    // test methode modulo of
+    @Test
+    public void testModuloOfTwoNumbers()
+    {
+        assertEquals(1, testee.modulo(10, 3));
+    }
+
+    @Test
+    public void testConvertDecToHex()
+    {
+        assertEquals("A", testee.decToHex(-10));
+    }
+
+    @Test
+    public void testConvertDecToBinary()
+    {
+        assertEquals("1111", testee.decToBinary(15));
+    }
+
+    @Test
+    public void testConvertDecToOctal()
+    {
+        assertEquals("12", testee.decToOctal(10));
+    }
+
     // test expected overflow of two integer values
     @Test(expected = ArithmeticException.class)
     public void testExceptedException() {
