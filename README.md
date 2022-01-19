@@ -1,7 +1,7 @@
 # SaveCalculator
 Der SaveCalculator rechnet intern mit einem Long, überprüft, ob es einen arithmetischen Überlauf geben würde und wirft in diesem Fall eine ArithmeticException.
 
-[![Website](https://img.shields.io/badge/Informatik_Modul_126-Berufsbildungsschule_Winterthur-green?style=flat-square)](https://www.bbw.ch/)
+[![Website](https://img.shields.io/badge/Informatik_Modul_426-Berufsbildungsschule_Winterthur-green?style=flat-square)](https://www.bbw.ch/)
 [![Website](https://img.shields.io/badge/GitHub-Git_Flow-red?style=flat-square)](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow/)
 [![Website](https://img.shields.io/badge/W3Schools-Getting_Started_With_Java-blue?style=flat-square)](https://www.w3schools.com/java/java_getstarted.asp)
 
