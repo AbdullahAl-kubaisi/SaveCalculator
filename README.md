@@ -6,7 +6,7 @@ Der SaveCalculator rechnet intern mit einem Long, überprüft, ob es einen arith
 [![Website](https://img.shields.io/badge/W3Schools-Getting_Started_With_Java-blue?style=flat-square)](https://www.w3schools.com/java/java_getstarted.asp)
 
 <p>
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVfCRuAyl1Idg7kzspN2ZwqCc075u3NXK72g&usqp=CAU" alt="my banner" width=100%> 
+  <img src="http://blog.wenzlaff.de/wp-content/uploads/2018/11/JUnit-Test.png" alt="JUnit-Test-img" width=100%> 
 </p>
 
 [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=marco-karpf&langs_count=5&border_radius=1)]()
