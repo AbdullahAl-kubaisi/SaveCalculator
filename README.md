@@ -11,15 +11,10 @@ Der SaveCalculator rechnet intern mit einem Long, überprüft, ob es einen arith
 
 [![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=marco-karpf&langs_count=5&border_radius=1)]()
 
-## Features:
+## Einleitung:
 
-- **Calculate power:** can be calculated by (U^2)/r, (u*i) or r*(i^2)
-
-- **Calculate tension:** can be calculated by (p*r)^(1/2), p/i or r*i
-
-- **Calculate current:** can be calculated by (p/r)^(1/2), p/u or u/r
-
-- **Calculate resitence:** can be calculated by (u*u)/p, p/(i*i) or u/i
+JUnit ist ein Framework innerhalb der Java Umgebung, welches das automatisierte Testen von Klassen und Applikationen erlaubt.
+Es wird oft im Zusammenhang mit so genannter Test-Driven-Development gebraucht. Testgetrieben heisst, dass zuerst die Tests geschrieben werden und dann dazu eine Implementation entwickelt wird, bis sie die Tests fehlerfrei besteht. (Nicht ganz einfach..)
 
 ## Installation
 
